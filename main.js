@@ -1,4 +1,3 @@
-// import './style.css'
 console.log('Hello World! This is the main.js file of your project.');
 
 // Seleciona todos os botões dentro da div com a classe contact-info
