@@ -12,7 +12,7 @@
 }
 
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 a {
@@ -32,6 +32,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: #F4F5FA;
   color: #171B36;
@@ -70,16 +71,6 @@ button {
   transition: border-color 0.25s;
   width: 100%;
   border: 1px solid #2D3153;
-}
-
-button:hover {
-  border-radius: 8px;
-  border: 1px solid transparent;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
