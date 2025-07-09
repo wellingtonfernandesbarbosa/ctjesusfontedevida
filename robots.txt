@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Impede o rastreamento de arquivos sensíveis ou irrelevantes
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /vite.svg
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /README.md
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Sitemaps (se houver)
+Sitemap: https://www.ctjesusfontedevida.vercel.app/sitemap.xml
