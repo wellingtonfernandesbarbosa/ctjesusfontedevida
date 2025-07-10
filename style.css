@@ -19,6 +19,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body,
@@ -161,6 +162,9 @@ footer {
 footer a {
   color: #FFFFFF;
   text-decoration: none;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* MODO CLARO */
@@ -179,30 +183,13 @@ footer a {
   }
 }
 
-/* TELAS MAIORES QUE 435px (temporário) */
+/* maior que 435 */
 @media (min-width: 436px) {
-  body>* {
-    display: none !important;
-  }
-
-  header {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: none;
-  }
-
-  .header-content {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+  main {
     width: 100%;
   }
-
-  .header-content img {
-    max-width: 200px;
-    height: auto;
+  
+  body {
+    background-color: #FFFFFF;
   }
 }
