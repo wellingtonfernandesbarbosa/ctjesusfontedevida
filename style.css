@@ -142,8 +142,8 @@ button {
   background-color: #C0C2D1;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 160px;
-  border: 1px solid #2D3153;
+  width: 170px;
+  border: none;
   color: #2D3153;
 }
 
