@@ -188,8 +188,15 @@ footer a {
   main {
     width: 100%;
   }
-  
+
   body {
     background-color: #FFFFFF;
+  }
+}
+
+/* maior que 768 */
+@media (min-width: 768px) {
+  .main-content {
+    font-size: 1.2rem;
   }
 }
