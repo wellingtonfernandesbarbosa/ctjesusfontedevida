@@ -40,11 +40,12 @@ body {
   justify-content: space-between;
 
   min-width: 100vw;
-  max-width: 435px;
+  /* max-width: 435px; */
   min-height: 90vh;
-
+  
   color: #171B36;
   text-align: center;
+  background-color: rgba(235, 235, 235, 1);
 }
 
 /* HEADER */
@@ -79,43 +80,36 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
+  padding: 1rem;
 }
 
 /* MAIN CONTENT */
-.main-content {
+.who-we-are {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1rem;
-  background-color: rgba(235, 235, 235, 1);
   flex: 1;
+}
+
+.contact {
+  padding: 0 1rem;
 }
 
 /* CONTACT */
 .contact-info {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 435px;
+  margin: 0 auto;
+  justify-content: space-around;
   gap: 1rem;
-  width: 50%;
-  margin: 0 auto 0;
-}
-
-.contact-info div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding-bottom: 1rem;
-}
-
-.contact-info a {
-  width: 100%;
 }
 
 .contact-link {
+  width: 170px;
+}
+
+.contact-link button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -142,7 +136,8 @@ button {
   background-color: #C0C2D1;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 170px;
+  width: 100%;
+  max-width: 170px;
   border: none;
   color: #2D3153;
 }
@@ -157,6 +152,7 @@ footer {
   color: #FFFFFF;
   font-size: 0.9em;
   padding: 1rem;
+  width: 100%;
 }
 
 footer a {
@@ -191,12 +187,5 @@ footer a {
 
   body {
     background-color: #FFFFFF;
-  }
-}
-
-/* maior que 768 */
-@media (min-width: 768px) {
-  .main-content {
-    font-size: 1.2rem;
   }
 }
