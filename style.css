@@ -1,10 +1,26 @@
 :root {
+  /* Fontes e renderização */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+
+  /* Cores */
+  --blue-dark: #0165BB;
+  --gray-light: rgba(235, 235, 235, 1);
+  --gray-base: #C0C2D1;
+  --gray-hover: #E0E2F1;
+  --gray-text: #2D3153;
+  --text-dark: #171B36;
+  --white: #FFFFFF;
+  --link-hover: #747bff;
+  --light-bg: #f9f9f9;
+  --light-mode-bg: #C0C2D1;
+  --dark-mode-bg: #272f62;
+  --light-mode-text: #213547;
+
+  color-scheme: light dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -24,7 +40,7 @@ body {
 
 body,
 footer {
-  background-color: #0165BB;
+  background-color: var(--blue-dark);
 }
 
 a {
@@ -42,10 +58,10 @@ body {
   min-width: 100vw;
   /* max-width: 435px; */
   min-height: 90vh;
-  
-  color: #171B36;
+
+  color: var(--text-dark);
   text-align: center;
-  background-color: rgba(235, 235, 235, 1);
+
 }
 
 /* HEADER */
@@ -81,6 +97,12 @@ main {
   flex-direction: column;
   flex: 1;
   padding: 1rem;
+  max-width: 1024px;
+}
+
+p {
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 /* MAIN CONTENT */
@@ -91,22 +113,18 @@ main {
   flex: 1;
 }
 
-.contact {
-  padding: 0 1rem;
-}
-
 /* CONTACT */
 .contact-info {
   display: flex;
   flex-wrap: wrap;
   max-width: 435px;
-  margin: 0 auto;
+  margin: 1rem 0 auto;
   justify-content: space-around;
   gap: 1rem;
 }
 
 .contact-link {
-  width: 170px;
+  width: 162px;
 }
 
 .contact-link button {
@@ -133,30 +151,30 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #C0C2D1;
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
   max-width: 170px;
   border: none;
-  color: #2D3153;
+  color: var(--gray-text);
+  background-color: var(--link-hover);
 }
 
 button:hover {
   border-color: #212246;
-  background-color: #E0E2F1;
+  background-color: var(--link-hover);
 }
 
 /* FOOTER */
 footer {
-  color: #FFFFFF;
+  color: var(--white);
   font-size: 0.9em;
   padding: 1rem;
   width: 100%;
 }
 
 footer a {
-  color: #FFFFFF;
+  color: var(--white);
   text-decoration: none;
   padding: 0;
   width: 100%;
@@ -166,26 +184,48 @@ footer a {
 /* MODO CLARO */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #C0C2D1;
+    color: var(--light-mode-text);
+    background-color: var(--light-mode-bg);
   }
 
   a:hover {
-    color: #747bff;
+    color: var(--link-hover);
+  }
+
+  body {
+    background-color: var(--white);
   }
 
   button {
-    background-color: #f9f9f9;
+    background-color: var(--gray-hover);
   }
 }
+
+/* MODO ESCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: var(--white);
+    background-color: var(--dark-mode-bg);
+  }
+
+  a:hover {
+    color: var(--link-hover);
+  }
+
+  body {
+    background-color: var(--dark-mode-bg);
+    color: var(--gray-hover);
+  }
+
+  button {
+    background-color: var(--gray-hover);
+  }
+}
+
 
 /* maior que 435 */
 @media (min-width: 436px) {
   main {
     width: 100%;
-  }
-
-  body {
-    background-color: #FFFFFF;
   }
 }
