@@ -26,7 +26,7 @@
 }
 
 * {
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -96,7 +96,7 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   max-width: 1024px;
 }
 
@@ -124,7 +124,7 @@ p {
 }
 
 .contact-link {
-  width: 162px;
+  width: fit-content;
 }
 
 .contact-link button {
@@ -154,7 +154,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   width: 100%;
-  max-width: 170px;
+  max-width: 140px;
   border: none;
   color: var(--gray-text);
   background-color: var(--link-hover);
@@ -227,6 +227,10 @@ footer a {
 @media (min-width: 436px) {
   main {
     width: 100%;
+  }
+
+  button {
+    width: 170px;
   }
 }
 
