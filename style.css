@@ -124,7 +124,7 @@ p {
 }
 
 .contact-link {
-  width: fit-content;
+  width: 144px;
 }
 
 .contact-link button {
@@ -223,13 +223,18 @@ footer a {
 }
 
 
-/* maior que 435 */
-@media (min-width: 436px) {
+/* maior que 430 */
+@media (min-width: 430px) {
   main {
     width: 100%;
   }
 
+  .contact-link {
+    width: 170px;
+  }
+
   button {
+    max-width: 170px;
     width: 170px;
   }
 }
